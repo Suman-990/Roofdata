@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RoofDataCapture - Professional Drone Roof Inspection</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,9 +16,10 @@
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <i class="fas fa-layer-group"></i>
-                    <span class="logo-text">RoofData<span class="logo-highlight">Capture</span></span>
-                </div>
+                    <img src="img/top_logo.png" alt="RoofDataCapture Logo" class="logo-image" height="32px">  
+                    <!-- <i class="fas fa-layer-group"></i>
+                    <span class="logo-text">RoofData<span class="logo-highlight">Capture</span></span>    -->      
+                 </div>
                
                 <ul class="nav-menu">
                     <li><a href="#services">Services</a></li>
@@ -72,9 +74,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-right">
-                <img src="r/drone-scan.png" alt="Drone inspecting roof" class="hero-image">
-            </div>
+           
         </div>
     </div>
 </section>
@@ -87,7 +87,7 @@
         </div>
         
         <div class="help-cards">
-            <div class="help-card">
+            <div class="help-card" data-aos="fade" data-aos-delay="0" data-aos-duration="300">
                 <div class="card-icon blue-icon">
                     <i class="fas fa-hard-hat"></i>
                 </div>
@@ -115,26 +115,26 @@
                 </div>
             </div>
 
-            <div class="help-card">
+            <div class="help-card" data-aos="fade" data-aos-delay="200" data-aos-duration="300">
                 <div class="card-icon purple-icon">
                     <i class="fas fa-building"></i>
                 </div>
                 <h3 class="card-title">Property Managers & Condo Boards</h3>
                 <ul class="card-list">
                     <li>
-                        <i class="far fa-check-circle"></i>
+                        <i class="far fa-check-circle" id="purple-check"></i>
                         <span>Maintain consistent records across portfolios</span>
                     </li>
                     <li>
-                        <i class="far fa-check-circle"></i>
+                        <i class="far fa-check-circle" id="purple-check"></i>
                         <span>Document before repairs or capital planning</span>
                     </li>
                     <li>
-                        <i class="far fa-check-circle"></i>
+                        <i class="far fa-check-circle" id="purple-check"></i>
                         <span>Share one clear report with stakeholders</span>
                     </li>
                     <li>
-                        <i class="far fa-check-circle"></i>
+                        <i class="far fa-check-circle" id="purple-check"></i>
                         <span>Reduce liability & access risk</span>
                     </li>
                 </ul>
@@ -143,26 +143,26 @@
                 </div>
             </div>
 
-            <div class="help-card">
+            <div class="help-card" data-aos="fade" data-aos-delay="400" data-aos-duration="300">
                 <div class="card-icon green-icon">
                     <i class="fas fa-shield-alt"></i>
                 </div>
                 <h3 class="card-title">Insurance & Restoration Professionals</h3>
                 <ul class="card-list">
                     <li>
-                        <i class="far fa-check-circle"></i>
+                        <i class="far fa-check-circle" id="green-check"></i>
                         <span>Clear, time-stamped roof imagery</span>
                     </li>
                     <li>
-                        <i class="far fa-check-circle"></i>
+                        <i class="far fa-check-circle" id="green-check"></i>
                         <span>Neutral third-party documentation</span>
                     </li>
                     <li>
-                        <i class="far fa-check-circle"></i>
+                        <i class="far fa-check-circle" id="green-check"></i>
                         <span>Faster file review & collaboration</span>
                     </li>
                     <li>
-                        <i class="far fa-check-circle"></i>
+                        <i class="far fa-check-circle" id="green-check"></i>
                         <span>Support claims workflows</span>
                     </li>
                 </ul>
@@ -183,8 +183,8 @@
         
         <div class="content-wrapper">
             <div class="content-left">
-                <video autoplay muted loop class="drone-image">
-                   <source src="/r/Drone_Roof_Survey_Video_Generation-2.mp4" type="video/mp4">
+                <video autoplay muted loop playsinline class="drone-image">
+                   <source src="r/Drone_Roof_Survey_Video_Generation-2.mp4" type="video/mp4">
                 </video>
             </div>
             
@@ -195,11 +195,11 @@
                         <span>What We Provide</span>
                     </h3>
                     <ul class="provide-list">
-                        <li>High-resolution drone roof photography</li>
-                        <li>Close-up imagery of key roof areas</li>
-                        <li>AI-assisted roof documentation</li>
-                        <li>Clean, structured digital deliverables</li>
-                        <li>24-48 hour</li>
+                        <li data-aos="fade" data-aos-delay="200" data-aos-duration="300">High-resolution drone roof photography</li>
+                        <li data-aos="fade" data-aos-delay="300" data-aos-duration="300">Close-up imagery of key roof areas</li>
+                        <li data-aos="fade" data-aos-delay="400" data-aos-duration="300">AI-assisted roof documentation</li>
+                        <li data-aos="fade" data-aos-delay="500" data-aos-duration="300">Clean, structured digital deliverables</li>
+                        <li data-aos="fade" data-aos-delay="600" data-aos-duration="300">24-48 hour turnaround</li>
                     </ul>
                 </div>
                 
@@ -210,10 +210,10 @@
                     </h3>
                     <p class="box-subtitle">We provide the data. You provide the expertise.</p>
                     <ul class="not-provide-list">
-                        <li>No inspection</li>
-                        <li>No diagnoses or damage</li>
-                        <li>No repair</li>
-                        <li>No contractor</li>
+                        <li data-aos="fade" data-aos-delay="200" data-aos-duration="300">No inspection</li>
+                        <li data-aos="fade" data-aos-delay="300" data-aos-duration="300">No diagnoses or damage</li>
+                        <li data-aos="fade" data-aos-delay="400" data-aos-duration="300">No repair</li>
+                        <li data-aos="fade" data-aos-delay="500" data-aos-duration="300">No contractor</li>
                     </ul>
                 </div>
             </div>
@@ -231,9 +231,9 @@
 
   <div class="features-row">
 
-    <div class="feature-item">
+    <div class="feature-item" data-aos="fade-down" data-aos-delay="0">
       <div class="feature-icon-wrap">
-       <i class="fa-regular fa-shield icon-safer"></i>
+       <img src="img/icon4.png" alt="Safer icon" class="feature-icon" height="28px">
       </div>
       <div class="feature-text-block">
         <span class="feature-label">Safer</span>
@@ -241,9 +241,9 @@
       </div>
     </div>
 
-    <div class="feature-item">
+    <div class="feature-item" data-aos="fade-down" data-aos-delay="100">
       <div class="feature-icon-wrap">
-        <i class="fa-regular fa-clock icon-faster"></i>
+        <img src="img/icon5.png" alt="Faster icon" class="feature-icon" height="28px">
       </div>
       <div class="feature-text-block">
         <span class="feature-label">Faster</span>
@@ -251,9 +251,9 @@
       </div>
     </div>
 
-    <div class="feature-item">
+    <div class="feature-item" data-aos="fade-down" data-aos-delay="200">
       <div class="feature-icon-wrap">
-        <i class="fa-regular fa-star icon-clearer"></i>
+        <img src="img/icon6.png" alt="Clearer icon" class="feature-icon" height="28px">
       </div>
       <div class="feature-text-block">
         <span class="feature-label">Clearer</span>
@@ -261,9 +261,9 @@
       </div>
     </div>
 
-    <div class="feature-item">
+    <div class="feature-item" data-aos="fade-down" data-aos-delay="300">
       <div class="feature-icon-wrap">
-        <i class="fa-regular fa-file-lines icon-unbiased"></i>
+        <img src="img/icon7.png" alt="Unbiased icon" class="feature-icon" height="28px">
       </div>
       <div class="feature-text-block">
         <span class="feature-label">Unbiased</span>
@@ -271,9 +271,9 @@
       </div>
     </div>
 
-    <div class="feature-item">
+    <div class="feature-item" data-aos="fade-down" data-aos-delay="400">
       <div class="feature-icon-wrap">
-        <i class="fa-solid fa-rotate icon-repeat"></i>
+        <img src="img/icon8.png" alt="Repeatable icon" class="feature-icon" height="28px">
       </div>
       <div class="feature-text-block">
         <span class="feature-label">Repeatable</span>
@@ -293,7 +293,7 @@
     </div>
   </div>
 
-  <div class="tablet-mockup-wrapper">
+  <div class="tablet-mockup-wrapper"  data-aos="slide-right">
     <img
       src="r/tab.jpg"
       alt="IMGING Digital Inspection Report on tablet device"
@@ -311,7 +311,7 @@
         </div>
         
         <div class="workflow-steps">
-            <div class="workflow-card">
+            <div class="workflow-card" data-aos="fade-up" data-aos-delay="0">
                 <div class="card-icon-circle">
                     <i class="far fa-file-alt"></i>
                 </div>
@@ -320,7 +320,7 @@
                 <p class="card-step">STEP 01</p>
             </div>
             <div class="workflow-divider"></div>
-            <div class="workflow-card">
+            <div class="workflow-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="card-icon-circle">
                     <i class="fas fa-camera"></i>
                 </div>
@@ -329,7 +329,7 @@
                 <p class="card-step">STEP 02</p>
             </div>
             <div class="workflow-divider"></div>
-            <div class="workflow-card">
+            <div class="workflow-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="card-icon-circle">
                     <i class="fas fa-layer-group"></i>
                 </div>
@@ -338,7 +338,7 @@
                 <p class="card-step">STEP 03</p>
             </div>
             <div class="workflow-divider"></div>
-            <div class="workflow-card">
+            <div class="workflow-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="card-icon-circle">
                     <i class="far fa-clock"></i>
                 </div>
@@ -351,7 +351,7 @@
 </section>
 <!--SERVICE_AREAS-->
 <section class="service-areas" id="services">
-    <div class="container">
+    <div class="container" data-aos="zoom-in">
         <div class="section-header">
             <h2 class="section-title">Service <span class="title-highlight">Areas</span></h2>
             <p class="section-description">We currently serve Toronto and surrounding areas. Additional areas available by request.</p>
@@ -366,64 +366,64 @@
                 <h3 class="areas-title">We currently serve Toronto and surrounding areas, including:</h3>
                 
                 <div class="areas-grid">
-                    <div class="area-column">
+                    <div class="area-column" data-aos="fade-left" data-aos-delay="300" data-aos-duration="600">
                         <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <img src="img/icon13.png" alt="Toronto icon" class="area-icon" height="36px">
                             <span>Toronto</span>
                         </div>
                         <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <img src="img/icon13.png" alt="Toronto icon" class="area-icon" height="36px">
                             <span>Scarborough</span>
                         </div>
                         <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <img src="img/icon13.png" alt="Toronto icon" class="area-icon" height="36px">
                             <span>North York</span>
                         </div>
                         <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <img src="img/icon13.png" alt="Toronto icon" class="area-icon" height="36px">
                             <span>Etobicoke</span>
                         </div>
                         <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <img src="img/icon13.png" alt="Toronto icon" class="area-icon" height="36px">
                             <span>Mississauga</span>
                         </div>
-                        <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                        <div class="area-item" >
+                            <img src="img/icon13.png" alt="Toronto icon" class="area-icon" height="36px">
                             <span>Brampton</span>
                         </div>
                         <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <img src="img/icon13.png" alt="Toronto icon" class="area-icon" height="36px">
                             <span>Vaughan</span>
                         </div>
                     </div>
                     
-                    <div class="area-column">
+                    <div class="area-column" data-aos="fade-right" data-aos-delay="600" data-aos-duration="600">
                         <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <img src="img/icon13.png" alt="Toronto icon" class="area-icon" height="36px">
                             <span>Richmond Hill</span>
                         </div>
                         <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <img src="img/icon13.png" alt="Toronto icon" class="area-icon" height="36px">
                             <span>Markham</span>
                         </div>
                         <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <img src="img/icon13.png" alt="Toronto icon" class="area-icon" height="36px">
                             <span>Pickering</span>
                         </div>
                         <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <img src="img/icon13.png" alt="Toronto icon" class="area-icon" height="36px">
                             <span>Ajax</span>
                         </div>
                         <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <img src="img/icon13.png" alt="Toronto icon" class="area-icon" height="36px">
                             <span>Whitby</span>
                         </div>
                         <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <img src="img/icon13.png" alt="Toronto icon" class="area-icon" height="36px">
                             <span>Oakville</span>
                         </div>
-                        <div class="area-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                        <div class="area-item" >
+                            <img src="img/icon13.png" alt="Toronto icon" class="area-icon" height="36px">
                             <span>Burlington</span>
                         </div>
                     </div>
@@ -438,7 +438,7 @@
 </section>
 <!--DESIGNED FOR-->
 <section class="professional-design-section">
-  <div class="design-container">
+  <div class="design-container" data-aos="fade-up">
     <h2 class="design-title">
       Designed for Professional <span class="design-highlight">Workflows</span>
     </h2>
@@ -447,36 +447,36 @@
     </p>
 
     <div class="design-grid">
-      <div class="design-card">
+      <div class="design-card" data-aos="fade-up" data-aos-delay="0">
         <div class="design-image">
-          <img src="r/workflow-1.jpg" alt="Roofing estimates and proposals">
+          <img src="img/img3.png" alt="Roofing estimates and proposals">
         </div>
         <div class="design-label">
           <h3>Roofing estimates and proposals</h3>
         </div>
       </div>
 
-      <div class="design-card">
+      <div class="design-card" data-aos="fade-up" data-aos-delay="100">
         <div class="design-image">
-          <img src="r/workflow-2.webp" alt="Property management records">
+          <img src="img/img4.png" alt="Property management records">
         </div>
         <div class="design-label">
           <h3>Property management records</h3>
         </div>
       </div>
 
-      <div class="design-card">
+      <div class="design-card" data-aos="fade-up" data-aos-delay="200">
         <div class="design-image">
-          <img src="r/workflow-3.jpg" alt="Insurance and restoration files">
+          <img src="img/img5.png" alt="Insurance and restoration files">
         </div>
         <div class="design-label">
           <h3>Insurance and restoration files</h3>
         </div>
       </div>
 
-      <div class="design-card">
+      <div class="design-card" data-aos="fade-up" data-aos-delay="300">
         <div class="design-image">
-          <img src="r/workflow-4.jpg" alt="Board and stakeholder presentations">
+          <img src="img/img6.png" alt="Board and stakeholder presentations">
         </div>
         <div class="design-label">
           <h3>Board and stakeholder presentations</h3>
@@ -498,10 +498,7 @@
       <div class="faq-item faq-item-open">
         <div class="faq-question">
           <span>Is this a roof inspection?</span>
-          <i class="fas fa-chevron-up"></i>
-        </div>
-        <div class="faq-answer">
-          <p>No. We provide drone imagery and AI-assisted documentation only. All inspection opinions, diagnoses, and recommendations must be made by licensed professionals.</p>
+          <i class="fas fa-chevron-down"></i>
         </div>
       </div>
       
@@ -572,5 +569,8 @@
     </div>
   </div>
 </footer>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="script.js"></script>
 </body>
 </html>

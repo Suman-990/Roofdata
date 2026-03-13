@@ -102,10 +102,11 @@ body {
 /* Hero Section */
 .hero {
     padding: 0;
-    background: linear-gradient(135deg, #f0f4f8 0%, #e8eef5 100%);
     position: relative;
     overflow: hidden;
-    margin-top: 80px;
+    margin-top: 58px;
+    height: 600px;
+    background-color: #e5e8ef;
 }
 
 .hero::before {
@@ -113,52 +114,95 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        linear-gradient(135deg, rgba(77, 140, 255, 0.04) 1px, transparent 1px),
-        linear-gradient(45deg, rgba(77, 140, 255, 0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
+    height: 85%;
+    width: 100%;
+    background-image: url(r/banner_back.png);
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
     pointer-events: none;
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 660px;
+    height: 100%;
+    width: 57%;
+    background-image: url(r/banner_img.png);
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+    animation: slideIn 0.8s ease-out forwards;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        
+    }
+    to {
+        transform: translateX(0);
+       
+    }
+}
+.hero > * {
+    position: relative;
+    z-index: 1;
 }
 
 .hero .container {
     max-width: 100%;
     margin: 0;
     padding: 0;
+
 }
 
 .hero-content {
     display: flex;
-    align-items: stretch;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
     z-index: 1;
-    min-height: 580px;
+    height: 100%;
+    gap: 0;
 }
 
 .hero-left {
-    flex: 0 0 52%;
     display: flex;
+    flex: 0 0 40%;
+    max-width: 45%;
+    height: 100%;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .hero-left-up {
     padding: 0;
-    flex: 1;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 60px;
-    background-image: url(r/bg-1.png);
-    padding-bottom: 10px;
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-bottom: 0px;
 }
 
+.hero-img {
+    flex: 1 1 auto;
+    width: 62%;
+    height: 625px;
+    margin-left: 0;
+    object-fit: cover;
+    object-position: center bottom;
+    align-self: flex-end;
+}
 .location-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    margin-left: 100px;
+    margin-left: 60px;
     background-color: #dce9ff;
     color: #3a3a3a;
     padding: 7px 16px;
@@ -175,7 +219,6 @@ body {
     color: #4d8cff;
 }
 
-/* Replace fa-map-marker-alt with a dot if using image reference */
 .location-badge::before {
     content: '•';
     color: #4d8cff;
@@ -184,9 +227,9 @@ body {
 }
 
 .hero-title {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 700;
-    margin-left: 100px;
+    margin-left: 60px;
     line-height: 1.15;
     color: #111827;
     margin-bottom: 20px;
@@ -199,8 +242,8 @@ body {
 }
 
 .hero-description {
-    font-size: 15px;
-    margin-left: 100px;
+    font-size: 14px;
+    margin-left: 60px;
     line-height: 1.65;
     color: #4b5563;
     margin-bottom: 36px;
@@ -211,7 +254,7 @@ body {
     display: flex;
     gap: 14px;
     margin-bottom: 0;
-    margin-left: 100px;
+    margin-left: 60px;
 }
 
 .hero-buttons .btn-primary {
@@ -252,31 +295,36 @@ body {
     background: rgba(77, 140, 255, 0.04);
 }
 
-/* Stats band — sits at bottom of hero-left, full-width band */
+/* Stats band — positioned in vertical middle of the bottom 15% */
 .hero-stats {
     display: flex;
     align-items: center;
-    gap: 0;
-    padding: 22px 0 22px 100px;
-   margin-top: 12px;
+    justify-content: flex-start;
+    gap: 24px;
+    margin-top: 110px; 
+    width: 100%;
+    padding-left: 80px;
+    position: relative; 
+    bottom: auto;
+    height: auto;
 }
 
 .stat-item {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    padding-right: 40px;
+    padding-right: 0;
 }
 
 .stat-value {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 800;
     color: #1a56db;
     line-height: 1;
 }
 
 .stat-label {
-    font-size: 13px;
+    font-size: 12px;
     color: #6b7280;
     font-weight: 500;
 }
@@ -285,27 +333,10 @@ body {
     width: 1px;
     height: 44px;
     background-color: #c5cdd8;
-    margin-right: 40px;
+    margin: 0;
     flex-shrink: 0;
 }
 
-.hero-right {
-    flex: 0 0 48%;
-    position: relative;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: flex-end;
-}
-
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: left bottom;
-    display: block;
-}
  /*WHO_WE_HELP*/
 
  .who-we-help {
@@ -420,7 +451,12 @@ body {
     margin-top: 2px;
     flex-shrink: 0;
 }
-
+#purple-check {
+    color: #a787f0;
+}
+#green-check {
+    color: #60eebf;
+}
 .card-footer-left {
     margin-top: auto;
     padding-top: 10px;
@@ -512,13 +548,21 @@ body {
 
 .content-left {
     flex: 1;
+    height: 550px;
+    background-color: #000;
+    border-radius: 16px 0 0 16px;
+    overflow: hidden;
 }
 
 .drone-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
+    display: block;
+    border-radius: 16px 0 0 16px;
+    background-color: #000; /* fallback */
+    opacity: 1;
+    filter: none;
 }
 
 .content-right {
@@ -534,7 +578,7 @@ body {
     padding: 40px;
     padding-left:80px;
     padding-top: 20px;
-    border-radius: 16px 16px 0 0;
+    border-radius: 0 16px 0 0;
     height: 280px;
     width: 500px;
 }
@@ -544,7 +588,7 @@ body {
     padding: 40px;
     padding-left: 80px;
     padding-top: 20px;
-    border-radius: 0 0 16px 16px;
+    border-radius: 0 0 16px 0;
     height: 270px;
     width: 500px;
 }
@@ -814,6 +858,8 @@ body {
 .workflow {
     padding: 100px 0;
     background-color: #f3f4f6;
+    background-image: url("img/mid_bk1.png");
+    
 }
 
 .workflow .container {
@@ -950,12 +996,14 @@ body {
 
 .map-container {
     flex: 1;
-    padding-left: 80px;
+    padding-left: 60px;
+    
 }
 
 .map-image {
-    width: 80%;
+    width: 90%;
     border-radius: 14px;
+    height: 100%;
 }
 
 .areas-list-container {
@@ -980,7 +1028,7 @@ body {
 .area-column {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
 }
 
 .area-item {
@@ -1312,324 +1360,702 @@ body {
   margin: 0;
 }
 
-/* =============================================
-   RESPONSIVE MEDIA QUERIES
-   ============================================= */
-
-/* Tablet: 768px - 1024px */
-@media (max-width: 1024px) {
-  .container {
-    padding: 0 24px;
-  }
-
-  /* Header */
-  .nav-menu {
-    gap: 20px;
-  }
-
-  /* Hero */
-  .hero-title {
-    font-size: 38px;
-    margin-left: 40px;
-  }
-  .hero-description {
-    margin-left: 40px;
-  }
-  .hero-buttons {
-    margin-left: 40px;
-  }
-  .location-badge {
-    margin-left: 40px;
-  }
-  .hero-stats {
-    padding-left: 40px;
-  }
-
-  /* Who We Help */
-  .help-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* What We Do */
-  .content-wrapper {
-    margin-left: 0;
-    flex-direction: column;
-  }
-  .provide-box,
-  .not-provide-box {
-    width: 100%;
-    height: auto;
-    padding-left: 40px;
-  }
-  .bottom-banner {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  /* Design grid */
-  .design-grid {
-    grid-template-columns: repeat(2, 240px);
-  }
-
-  /* Workflow */
-  .workflow-steps {
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  .workflow-card {
-    width: 280px;
-  }
-
-  /* Service Areas */
-  .service-content {
-    flex-direction: column;
-  }
-  .map-container {
-    padding-left: 0;
-    width: 100%;
-  }
-  .map-image {
-    width: 100%;
-  }
-  .additional-areas-box {
-    width: 100%;
-  }
-
-  /* Why Use */
-  .why-use-section .features-row {
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  .why-use-section .value-prop-row {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-  .why-use-section .value-left p {
-    white-space: normal;
-  }
-  .why-use-section .value-divider {
-    display: none;
-  }
+/* ==================== COMPREHENSIVE RESPONSIVE STYLES ==================== */
+/* Desktop and Large Devices (above 1024px) - original styling */
+@media screen and (min-width: 1025px) {
+    .hero-stats {
+        position: relative;
+        margin-top: 110px;
+        height: auto;
+        bottom: auto;
+        width: 100%;
+        padding-left: 80px;
+    }
 }
 
-/* Mobile: max 768px */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 16px;
-  }
 
-  /* Header / Navbar */
-  .navbar {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .nav-menu {
-    display: none; /* hide nav on mobile; can be toggled with JS */
-  }
+/* Large Tablets & iPad Pro (1024px and below) */
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
 
-  /* Hero */
-  .hero {
-    margin-top: 60px;
-  }
-  .hero-content {
-    flex-direction: column;
-    min-height: auto;
-  }
-  .hero-left {
-    flex: none;
-    width: 100%;
-  }
-  .hero-left-up {
-    padding-top: 40px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .hero-title {
-    font-size: 30px;
-    margin-left: 0;
-  }
-  .hero-description {
-    margin-left: 0;
-    max-width: 100%;
-  }
-  .hero-buttons {
-    margin-left: 0;
-    flex-wrap: wrap;
-  }
-  .location-badge {
-    margin-left: 0;
-  }
-  .hero-stats {
-    padding-left: 16px;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  .stat-divider {
-    display: none;
-  }
-  .hero-right {
-    flex: none;
-    width: 100%;
-    height: 260px;
-  }
+    /* Header */
+    .nav-menu {
+        gap: 25px;
+    }
 
-  /* Who We Help */
-  .who-we-help {
-    padding: 60px 0;
-  }
-  .help-cards {
-    grid-template-columns: 1fr;
-  }
-  .section-title {
-    font-size: 24px;
-  }
-  .section-description {
-    font-size: 15px;
-  }
+    /* Hero - Tablet: croping right side of image */
+    .hero::after {
+        left: auto;
+        right: 0;
+        width: 55%;
+        background-position: left center;
+    }
 
-  /* What We Do */
-  .what-we-do {
-    padding: 60px 0;
-  }
-  .content-wrapper {
-    margin-left: 0;
-    flex-direction: column;
-  }
-  .provide-box,
-  .not-provide-box {
-    width: 100%;
-    height: auto;
-    padding: 24px 20px;
-  }
-  .bottom-banner {
-    width: 100%;
-    margin-left: 0;
-    height: auto;
-    padding: 14px 16px;
-  }
+    .hero-left {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
 
-  /* Why Use */
-  .why-use-section .feature-item {
-    width: 100%;
-    padding: 0 8px;
-  }
-  .why-use-section .value-right p {
-    font-size: 28px;
-  }
-  .why-use-section .tablet-mockup-img {
-    width: 100%;
-  }
+    .hero-left-up {
+        padding-left: 0;
+    }
 
-  /* Workflow */
-  .workflow {
-    padding: 60px 0;
-  }
-  .workflow-steps {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-  .workflow-card {
-    width: 100%;
-    max-width: 340px;
-    height: auto;
-  }
-  .workflow-divider {
-    display: none;
-  }
+    .location-badge, .hero-title, .hero-description, .hero-buttons {
+        margin-left: 30px;
+    }
 
-  /* Service Areas */
-  .service-areas {
-    padding: 60px 0;
-  }
-  .service-content {
-    flex-direction: column;
-  }
-  .map-container {
-    padding-left: 0;
-    width: 100%;
-  }
-  .map-image {
-    width: 100%;
-  }
-  .areas-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  .additional-areas-box {
-    width: 100%;
-  }
+    /* Stats positioning -  relative for tablets */
+    .hero-stats {
+        position: relative;
+        margin-top: 110px;
+        width: 100%;
+        padding-left: 50px;
+        height: auto;
+        bottom: auto;
+    }
 
-  /* Designed For */
-  .professional-design-section {
-    padding: 60px 16px;
-  }
-  .design-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-  .design-card {
-    width: 100%;
-    height: 220px;
-  }
-  .design-title {
-    font-size: 24px;
-  }
+    /* What We Do */
+    .content-wrapper {
+        margin-left: 0;
+        flex-direction: column;
+    }
+    .content-left {
+        border-radius: 16px 16px 0 0;
+        height: 400px;
+    }
+    .drone-image {
+        border-radius: 16px 16px 0 0;
+    }
+    .provide-box, .not-provide-box {
+        width: 100%;
+        border-radius: 0;
+    }
+    .provide-box {
+        border-radius: 0;
+    }
+    .not-provide-box {
+        border-radius: 0 0 16px 16px;
+    }
+    .bottom-banner {
+        width: 100%;
+        margin-left: 0;
+        height: auto;
+        padding: 20px 12px;
+    }
 
-  /* FAQ */
-  .faq-section {
-    padding: 60px 16px 80px;
-  }
-  .faq-title {
-    font-size: 28px;
-    margin-bottom: 36px;
-  }
-  .faq-question {
-    padding: 18px 20px;
-  }
-  .faq-answer {
-    padding: 0 20px 20px;
-  }
+    /* Help cards */
+    .help-cards {
+        gap: 20px;
+    }
+    .help-card {
+        padding: 30px 20px;
+    }
 
-  /* Footer */
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .footer-links {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  .footer-bottom {
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
-  }
+    .why-use-section .features-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 80px;
+    }
+    .why-use-section .feature-item {
+        width: 33.33%;
+        margin-bottom: 30px;
+    }
+
+    /* Value prop */
+    .why-use-section .value-right p {
+        font-size: 32px;
+    }
+    .why-use-section .value-left p {
+        font-size: 16px;
+    }
+
+    /* Workflow */
+    .workflow-steps {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .workflow-card {
+        width: 45%;
+        margin-bottom: 0;
+    }
+    .workflow-divider {
+        display: none;
+    }
+
+    /* Service areas */
+    .service-content {
+        flex-direction: column;
+    }
+    .map-container {
+        padding-left: 0;
+        margin-bottom: 40px;
+    }
+    .map-image {
+        width: 100%;
+    }
+    .areas-list-container {
+        width: 100%;
+    }
+    .additional-areas-box {
+        width: 100%;
+    }
+
+    /* Design grid */
+    .design-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+    .design-card {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
-/* Small Mobile: max 480px */
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 26px;
-  }
-  .design-grid {
-    grid-template-columns: 1fr;
-  }
-  .design-card {
-    width: 100%;
-  }
-  .hero-buttons {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .hero-buttons .btn-primary,
-  .hero-buttons .btn-secondary {
-    width: 100%;
-    justify-content: center;
-  }
-  .faq-title {
-    font-size: 24px;
-  }
+/* iPad Mini (769px - 820px) */
+@media screen and (min-width: 769px) and (max-width: 860px) {
+    /* Hero */
+    .hero::after {
+        display: block !important;
+        width: 50%;
+        right: -8%;
+        background-position: left center;
+        opacity: 1;
+    }
+
+    .hero-left {
+        max-width: 55%;
+        flex: 0 0 55%;
+    }
+
+    .hero-title {
+        font-size: 30px;
+        margin-left: 25px;
+    }
+
+    .hero-description {
+        margin-left: 25px;
+        max-width: 350px;
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        margin-left: 25px;
+        gap: 10px;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    /* Stats positioning  */
+    .hero-stats {
+        position: relative;
+        margin-top: 120px;
+        width: 100%;
+        padding-left: 40px;
+        gap: 18px;
+        height: auto;
+        bottom: auto;
+    }
+
+    .stat-value {
+        font-size: 20px;
+    }
+
+    .stat-label {
+        font-size: 11px;
+    }
+
+    .stat-divider {
+        height: 36px;
+    }
+
+    /* Adjust feature items */
+    .why-use-section .features-row {
+        margin-left: 120px;
+        
+    }
+    .why-use-section .feature-item {
+        width: 48%;
+        padding: 0 8px;
+    }
+
+    .why-use-section .value-right p {
+        font-size: 28px;
+    }
+}
+
+/* Android & Mobile (768px and below) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    /* Header & Mobile Nav */
+    .menu-toggle {
+        display: block !important;
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 65px;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: #1a1f35;
+        flex-direction: column;
+        padding: 40px 20px;
+        transition: left 0.3s ease;
+        z-index: 999;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    /* Hero - Mobile: absolute positioning for stats only on mobile */
+    .hero {
+        height: auto;
+        min-height: 550px;
+        position: relative;
+    }
+
+    .hero::after {
+        display: none;
+    }
+
+    .hero::before {
+        background-position: left center;
+        height: 85%;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        min-height: 550px;
+        position: relative;
+    }
+
+    .hero-left {
+        max-width: 100%;
+        flex: 0 0 100%;
+        padding: 30px 0;
+        width: 100%;
+        overflow: visible;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hero-left-up {
+        padding-top: 30px;
+        padding-left: 0;
+        transform: none;
+        width: 100%;
+    }
+
+    .location-badge {
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+        margin-left: 20px;
+        max-width: 90%;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        margin-left: 20px;
+        max-width: 90%;
+        margin-bottom: 25px;
+    }
+
+    .hero-buttons {
+        margin-left: 20px;
+        flex-direction: column;
+        gap: 12px;
+        width: 90%;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    /* Hero Stats - ONLY absolute on mobile */
+    .hero-stats {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 15%;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        margin: 0;
+        top: auto;
+        transform: translateY(0);
+    }
+
+    .stat-divider {
+        display: flex;
+        width: 1px;
+        height: 30px;
+        background-color: #c5cdd8;
+        margin: 0 2px;
+    }
+
+    .stat-item {
+        width: auto;
+        flex: 1;
+        align-items: center;
+        text-align: center;
+        padding: 0 5px;
+    }
+
+    .stat-value {
+        font-size: 18px;
+        white-space: nowrap;
+    }
+
+    .stat-label {
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    /* Who We Help */
+    .help-cards {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .section-description {
+        font-size: 16px;
+    }
+
+    /* What We Do */
+    .content-wrapper {
+        margin-left: 0;
+        flex-direction: column;
+    }
+
+    .content-left {
+        border-radius: 16px 16px 0 0;
+        height: 200px;
+    }
+
+    .drone-image {
+        border-radius: 16px 16px 0 0;
+    }
+
+    .provide-box, .not-provide-box {
+        width: 100%;
+        padding: 25px 20px;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .provide-box {
+        padding-left: 20px;
+    }
+
+    .not-provide-box {
+        padding-left: 20px;
+        border-radius: 0 0 16px 16px;
+    }
+
+    .bottom-banner {
+        width: 100%;
+        margin-left: 0;
+        height: auto;
+        padding: 15px 12px;
+    }
+
+    .bottom-banner p {
+        letter-spacing: 2px;
+        font-size: 10px;
+    }
+
+    /* Why Use */
+    .why-use-section .features-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 100px;
+    }
+
+    .why-use-section .feature-item {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0 20px;
+    }
+
+    .why-use-section .value-prop-row {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .why-use-section .value-left {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .why-use-section .value-left p {
+        white-space: normal;
+    }
+
+    .why-use-section .value-divider {
+        display: none;
+    }
+
+    .why-use-section .value-right {
+        margin-left: 0;
+    }
+
+    .why-use-section .value-right p {
+        font-size: 24px;
+    }
+
+    .why-use-section .tablet-mockup-img {
+        width: 100%;
+        border-radius: 16px;
+    }
+
+    /* Workflow */
+    .workflow-steps {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .workflow-card {
+        width: 100%;
+        margin-bottom: 0;
+        height: auto;
+    }
+
+    .workflow-divider {
+        display: none;
+    }
+
+    /* Service Areas */
+    .service-content {
+        flex-direction: column;
+    }
+
+    .map-container {
+        padding-left: 0;
+        margin-bottom: 30px;
+    }
+
+    .map-image {
+        width: 100%;
+    }
+
+    .areas-title {
+        font-size: 20px;
+    }
+
+    .areas-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .additional-areas-box {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    /* Design Grid */
+    .design-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 20px;
+    }
+
+    .design-card {
+        width: 100%;
+        max-width: 300px;
+        height: 280px;
+    }
+
+    .design-title {
+        font-size: 26px;
+    }
+
+    .design-tagline {
+        font-size: 20px;
+    }
+
+    /* FAQ */
+    .faq-title {
+        font-size: 28px;
+    }
+
+    .faq-question {
+        padding: 20px;
+    }
+
+    .faq-question span {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .footer-cta {
+        align-self: stretch;
+        text-align: center;
+    }
+}
+
+/* Small Android Phones (480px and below) */
+@media screen and (max-width: 480px) {
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .hero-stats {
+        gap: 4px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .stat-item {
+        padding: 0 2px;
+    }
+
+    .stat-value {
+        font-size: 16px;
+    }
+
+    .stat-label {
+        font-size: 9px;
+    }
+
+    .stat-divider {
+        height: 25px;
+        margin: 0 1px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .provide-list li,
+    .not-provide-list li {
+        font-size: 13px;
+    }
+
+    .bottom-banner p {
+        letter-spacing: 1px;
+        font-size: 9px;
+    }
+
+    .why-use-section .value-right p {
+        font-size: 20px;
+    }
+
+    .design-title {
+        font-size: 22px;
+    }
+
+    .design-tagline {
+        font-size: 16px;
+    }
+
+    .faq-title {
+        font-size: 24px;
+    }
+}
+
+/* Very Small Devices (360px and below) */
+@media screen and (max-width: 360px) {
+    .hero-title {
+        font-size: 22px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .location-badge {
+        font-size: 9px;
+        padding: 5px 10px;
+        margin-left: 15px;
+    }
+
+    .hero-stats {
+        padding-left: 8px;
+        padding-right: 8px;
+        gap: 2px;
+    }
+    .why-use-section .features-row {
+        margin-left: 70px;
+    }
+    .stat-value {
+        font-size: 14px;
+    }
+
+    .stat-label {
+        font-size: 8px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
 }
