@@ -1423,6 +1423,7 @@ body {
     }
     .drone-image {
         border-radius: 16px 16px 0 0;
+        width: 105%;
     }
     .provide-box, .not-provide-box {
         width: 100%;
