@@ -712,7 +712,6 @@ body {
 .why-use-section {
   width: 100%;
   padding: 60px 0 80px;
-  font-family: 'Inter', sans-serif;
   background: #ffffff;
 }
 
@@ -1071,7 +1070,6 @@ body {
 .professional-design-section {
   background: linear-gradient(to bottom, #e8eef5 0%, #f5f7fa 100%);
   padding: 80px 20px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 .design-container {
@@ -1169,7 +1167,6 @@ body {
 .faq-section {
   background-color: #f3f9ff;
   padding: 80px 20px 100px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 .faq-container {
@@ -1248,7 +1245,6 @@ body {
 .footer-section {
   background-color: #060f1c;
   padding: 60px 20px 30px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 .footer-container {
